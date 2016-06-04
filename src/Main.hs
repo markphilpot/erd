@@ -37,7 +37,7 @@ main = do
 
 -- | Converts an entire ER-diagram from an ER file into a GraphViz graph.
 dotER :: ER -> G.DotGraph L.Text
-dotER er = graph' $ do
+dotER er = digraph' $ do
   graphAttrs (graphTitle $ title er)
   graphAttrs [A.RankDir A.FromLeft]
   nodeAttrs [shape PlainText] -- recommended for HTML labels
